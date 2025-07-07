@@ -1,8 +1,8 @@
-# Repository Name
+# gitdash
 
 ## Table of Contents
 
-- [Repository Name](#repository-name)
+- [gitdash](#gitdash)
   - [Table of Contents](#table-of-contents)
   - [Contributing](#contributing)
 
