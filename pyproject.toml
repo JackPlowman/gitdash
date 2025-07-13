@@ -3,13 +3,13 @@ name = "gitdash"
 dynamic = ["version"]
 requires-python = ">=3.13"
 dependencies = [
-  "ruff==0.12.2",
+  "ruff==0.12.3",
   "textual-dev==1.7.0",
-  "ty==0.0.1-alpha.13"
+  "ty==0.0.1-alpha.14"
 ]
 
 [tool.uv]
-required-version = "0.7.19"
+required-version = "0.7.20"
 package = false
 
 [tool.ruff]
