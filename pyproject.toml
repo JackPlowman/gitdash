@@ -3,9 +3,9 @@ name = "gitdash"
 dynamic = ["version"]
 requires-python = "~=3.13.0"
 dependencies = [
-  "ruff==0.12.3",
+  "ruff==0.12.10",
   "textual-dev==1.7.0",
-  "ty==0.0.1-alpha.14"
+  "ty==0.0.1-alpha.19"
 ]
 
 [tool.uv]
@@ -31,26 +31,6 @@ ignore = [
 
 fixable = ["ALL"]
 unfixable = []
-
-exclude = [
-  ".bzr",
-  ".direnv",
-  ".eggs",
-  ".git",
-  ".hg",
-  ".mypy_cache",
-  ".nox",
-  ".pants.d",
-  ".pytype",
-  ".ruff_cache",
-  ".svn",
-  ".tox",
-  ".venv",
-  "__pypackages__",
-  "_build",
-]
-
-dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
 
 [tool.ruff.lint.pydocstyle]
 convention = "google"
