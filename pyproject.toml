@@ -3,8 +3,8 @@ name = "gitdash"
 dynamic = ["version"]
 requires-python = "~=3.13.0"
 dependencies = [
-  "ruff==0.12.11",
-  "textual-dev==1.7.0",
+  "ruff==0.14.1",
+  "textual-dev==1.8.0",
   "ty==0.0.1-alpha.20"
 ]
 
