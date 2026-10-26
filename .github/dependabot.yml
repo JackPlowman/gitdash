@@ -8,6 +8,8 @@ updates:
       cronjob: "30 7 * * *"
       timezone: "Europe/London"
     target-branch: "main"
+    cooldown:
+      default-days: 7
     groups:
       github-actions:
         applies-to: "version-updates"
@@ -26,6 +28,8 @@ updates:
       cronjob: "30 7 * * *"
       timezone: "Europe/London"
     target-branch: "main"
+    cooldown:
+      default-days: 7
     groups:
       uv:
         applies-to: "version-updates"
