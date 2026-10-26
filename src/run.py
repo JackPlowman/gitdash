@@ -1,9 +1,4 @@
-# /// script
-# requires-python = ">=3.13"
-# dependencies = [
-#     "textual==3.6.0",
-# ]
-# ///
+# Copyright (c) 2026 Jack Plowman
 
 from textual.app import App, ComposeResult
 from textual.screen import Screen
@@ -12,6 +7,7 @@ from textual.widgets import Button, Digits
 
 class GitDashApp(App):
     """A simple Git dashboard application."""
+
     def compose(self) -> ComposeResult:
         """Compose the screen layout."""
         yield Button("Issues", id="issues-button", variant="primary")
@@ -28,8 +24,10 @@ class GitDashApp(App):
             case "pull-requests-button":
                 self.push_screen(PullRequestsScreen())
 
+
 class IssuesScreen(Screen):
     """Screen to display issues."""
+
     def compose(self) -> ComposeResult:
         """Compose the screen layout."""
         yield Digits("Issues", id="issue-count")
@@ -41,8 +39,10 @@ class IssuesScreen(Screen):
             case "back-button":
                 self.app.pop_screen()
 
+
 class PullRequestsScreen(Screen):
     """Screen to display pull requests."""
+
     def compose(self) -> ComposeResult:
         """Compose the screen layout."""
         yield Digits("Pull Requests", id="pr-count")

@@ -4,13 +4,18 @@ on:
   pull_request:
     types: [opened, edited, synchronize]
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 permissions: {}
 
 jobs:
   common-pull-request-tasks:
     name: Common Pull Request Tasks
     permissions:
-      pull-requests: write
-    uses: JackPlowman/reusable-workflows/.github/workflows/common-pull-request-tasks.yml@3ddc61ad19cda4cdf8a593646d90bbd48f788dfd # v2025.09.04.03
+      contents: read
+      pull-requests: write # Apply labels and dependency review comments.
+    uses: JackPlowman/reusable-workflows/.github/workflows/common-pull-request-tasks.yml@f82d61d53648ae90f8a0406c0f4bbf1aef332337 # v2026.10.25.01
     secrets:
       workflow_github_token: ${{ secrets.GITHUB_TOKEN }}
