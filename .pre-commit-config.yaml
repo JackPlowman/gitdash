@@ -49,17 +49,20 @@ repos:
     hooks:
       - id: ruff-check
         name: Ruff lint
-        language: system
+        language: python
+        additional_dependencies: [uv==0.13.5]
         entry: uv run --locked ruff check
         types: [python]
       - id: ruff-format
         name: Ruff format check
-        language: system
+        language: python
+        additional_dependencies: [uv==0.13.5]
         entry: uv run --locked ruff format --check
         types: [python]
       - id: ty-check
         name: Python type check
-        language: system
+        language: python
+        additional_dependencies: [uv==0.13.5]
         entry: uv run --locked ty check
         types: [python]
         pass_filenames: false
